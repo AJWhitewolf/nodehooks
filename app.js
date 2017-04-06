@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var bb_splash = require('./routes/api/bb/splashnet');
+var nodehooks = require('./routes/api/gh/nodehooks');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/hooks/bb/splashnet', bb_splash);
+app.use('/hooks/gh/nodehooks', nodehooks);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
