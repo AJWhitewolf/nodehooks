@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
     //     client.write("git restart");
     //     client.destroy();
     // });
-    // res.sendStatus(200);
+    res.sendStatus(200);
 });
 
 module.exports = router;
